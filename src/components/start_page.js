@@ -8,8 +8,13 @@
 
 import React from 'react';
 import {Text, View, Image, TouchableOpacity} from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 const StartPage = () => {
+  function openCamera() {
+    Actions.cam()
+  }
+
   return (
     <View
       style={[
@@ -31,7 +36,8 @@ const StartPage = () => {
         <Text style={{fontSize: 25, color: 'white'}}>Pramaan POS</Text>
       </View>
       <View style={{flex: 748, justifyContent: 'center', alignItems: 'center'}}>
-        <TouchableOpacity>
+        <TouchableOpacity
+        onPress={openCamera}>
           <View
             style={{
               marginTop: 50,
